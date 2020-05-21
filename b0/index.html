@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>::: oo브랜드에 오신 것을 환영합니다.-css</title>
+      <link rel="stylesheet" href="reset.css">
+      <link rel="stylesheet" href="<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR"
+       rel="stylesheet">
+
+
+    <style>
+
+
+          /* <!-- //link 태그를 사용하여 전에 만든 reset.css 로 연결  --> */
+      /* 구글에 구글 웹 폰트
+      <!-- 초기화 --> */
+    /* *전체선택자  */
+     
+
+      /* 공통스타일 */
+      .tit2{color: deeppink; position:absolute;
+      width:50%; top: 20px; font-size:32px; left:25%; text-align:center; }
+      .wrap { width: 1280px; margin:0 auto;}
+
+     
+     
+      /*콘텐츠 영역 서식*/
+      .content{ clear: both; padding-top: 10px;}
+      .content:before{ content:""; display: block; width:100%; height: 2px; background:#333;}
+      .breadcrumb{height: 42px; line-height: 42; columns: #333;}
+      breadcrumb a { color:#333;}
+      .con{ clear:both; width:100%;}
+      .sub_tit1{ line-height: 3.6; text-align: center;}
+      .lst{ clear:both; width: 990px; margin: 10px auto;}
+      .lst li{ float:left; margin:15px;}
+      /* 푸터 영역 서식*/
+     .ft{clear:both;  width: 100%; margin-top: 10px; 
+     border-top:3px solid #333; background-color: #444; color: #fff;}
+     .ft_wrap, .fnb { clear:both; width: 1280px; margin:10px auto; }
+     .fnb li{ float:left; padding: 15px;}
+     .fndb li a{color:#fff; padding:15px }
+     .ft_wrap { text-align : center; padding: 20px; margin-bottom: 0; } 
+    
+    </style>
+  </head>
+  <body>
+    <!-- <p>
+      //static 은 기본값이라 설정하지않는다. 위->아래 오른쪽으로 쌓인다. <br />
+      크기가 주어지지않아도 콘텐츠의 크기만큼씩 자동으로 쌓이게 된다 . 크기를
+      줘도대고<br />
+      안줘도 된다 컨텐츠의 크기의 따라서 그다음위치가 보통결정이 된다. (top,
+      left 값을 안줘도된다 )
+    </p>
+    <br />
+
+    <p>
+      //relative 주어진크기만큼 쌓이고 그다음의 콘텐츠가 다음으로 오게된다<br />
+      //콘텐츠가 지정된 박스아래에 오게됨 .예를 들면 200px 이면 다음에<br>
+      지정된박스아래에 오게된다. //relative는 가급적이면 크기를 줘라 (right,left
+      안줘도 됨 주면 오히려 혼재됨 )
+    </p>
+    <br />
+
+    <!-- <p> -->
+      <!-- //absolute 윈도우 카드놀이에서 겹치게만드는걸 가능함. ,화면 스크롤시
+      <br />
+      안보일수도 잇음. ex)postion : absolute left :100px, top200px, w:300px,<br />
+      h:300px. 가장먼저 코딩된녀석부터 값을 준다. 레프트랑,탑이랑 크기주면됨<br />
+      Zindex(덮혀잇는거,층에대한높이 즉 덮혀잇는높이는 제트인덱스로 계산됨.<br />
+      층번호임 ) 레프트라이트는 x축 탑이랑 바텀은 y축 그래서 z인덱스이다
+      가장먼저<br />
+      깔린 박스는 zindex 값이없어도 됨 . 단층이니까 ex)position :absolute
+      right<br />
+      400px ,bottom ,w, f 값 사진을 가운데로 : margin 10px auto(지가알아서<br />
+      함,오토는 right,left의 마진값을 동일하게준다) ;
+    </p>
+    <br />
+
+    <p>
+      //fixed 앱솔룻처럼 겹치게 하는게 가능 .화면의 고정이라는 의미 ., 화
+      스크롤시 그대로 떠잇게됨.
+    </p>
+    <br />
+
+    <p>
+      *중요 *박스와 박스 사이에 공간여백은 마진 박스와 벽은 패딩을 사용한다.
+      *마진은<br />
+      음수값이 적용이된다(margin:left:50%-(width/2) *엢솔룻에서 fix에서
+      그림을<br />
+      중앙으로 몰떄 사용하는걸 제외하고 사용 ㄴㄴ *clear 속성은 아랫줄로 이동
+      ex)<br />
+      .class {clear left} *position 이 스태틱(정적)이나 릴레이티(상대)이면<br />
+      마진패딩 프로트 clear 사용하고 두번째값을 auto라고 지정 position이<br />
+      엡숄룻(절대), 삑스(부동)면 left,right, z-index,tp, bottom 사용 가운데로
+      몰고<br />
+      싶으면 margin -left 값을 50% -(width/2)
+    </p>
+    <br />
+
+    <p>
+      //float left 왼쪽으로 밀어부쳐라, right 오른쪽 밀어부쳐라 (글자,아이콘)<br />
+      clear both ,left ,right 글씨 끌어내리기 다음줄로 <br />
+      헤더부분은 relative로 <br />
+      사진겹치기 엡숄루트(기본적으로 페이지맨 상단에서 함 ) position 설정 <br />
+      부모한테 포지션을 position: relative 를 건다. (기준점을 부모로 하고 싶을때
+      relative를 사용한다.)
+    </p>
+    <br /> --> -->
+
+    <div class="wrap">
+      <header class="hd">
+        <a href="" class="logo"
+          ><img src="https://placehold.it/100x45/2c8" alt="logo" />
+          <!-- 속성넣기[]기호로 넣을수 있음  -->
+        </a>
+        <h3 class="tit2">위치관련 속성</h3>
+        <nav class="tnb">
+          <ul>
+            <li><a href="">상단1</a></li>
+            <li><a href="">상단2</a></li>
+            <li><a href="">상단3</a></li>
+          </ul>
+        </nav>
+
+        <nav class="gnb"></nav>
+      </header>
+    </div>
+    
+    <main class="content">
+      <div class="breadcrumb">
+        <p>
+          <!-- &gt and 기호임  -->
+          <a href="">제품소개</a>&gt; <a href="">제품소개</a>&gt;
+          <span>남성</span>
+        </p>
+      </div>
+      <figure class="sub_vs">
+        <img src="https://placehold.it/1280x360/333" alt="" />
+      </figure>
+      <section class="con">
+        <h3 class="sub_tit1">여기는 항목리스트 제목</h3>
+        <ul class="1st">
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="https://httpsplacehold.it/300x220/c28" alt="logo"
+            /></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="ft">
+      <nav class="fnb">
+        <ul>
+          <li><a href="">하단링크1</a></li>
+          <li><a href="">하단링크2</a></li>
+          <li><a href="">하단링크3</a></li>
+          <li><a href="">하단링크4</a></li>
+        </ul>
+      </nav>
+      <div class="ft_wrap">
+        <p class="addr">
+          서울특별시 종로구 관철동 24-4 미래빌딩 509호 |02-485-2748
+        </p>
+        <p class="copyright">Copyright(C) 2020. Kim.kt All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
