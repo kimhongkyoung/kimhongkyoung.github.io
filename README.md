@@ -1,1 +1,1 @@
-# kimhongkyoung.github.io
+이니스프리 사이트 구축 메인에 대한 내용입니다. 
